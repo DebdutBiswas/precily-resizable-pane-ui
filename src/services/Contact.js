@@ -8,7 +8,7 @@ axios.defaults.headers.put['Content-Type'] = 'application/json';
 axios.defaults.headers.delete['Content-Type'] = 'application/json';
 
 export function setContactsBaseURL(url) {
-    axios.defaults.baseURL = url || 'http://localhost:3000/contacts';
+    axios.defaults.baseURL = url;
 };
 
 export function getAllContacts(setState) {

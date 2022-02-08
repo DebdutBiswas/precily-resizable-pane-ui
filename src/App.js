@@ -6,11 +6,15 @@ import Form from "./components/Form";
 import Counter from "./components/Counter";
 import List from "./components/List";
 
-import { getAllContacts, addNewContact, getContactById, updateContactById, deleteContactById } from "./services/Contact";
+import { setContactsBaseURL, getAllContacts, addNewContact, getContactById, updateContactById, deleteContactById } from "./services/Contact";
 
 import "./styles.css";
 import "./App.css";
 import "./gutter.css";
+
+const apiBaseURL = process.env.REACT_APP_API_URI || 'http://localhost:3000';
+
+setContactsBaseURL(`${apiBaseURL}/contacts`);
 
 const App = () => {
   const [data, setData] = useState([]);
