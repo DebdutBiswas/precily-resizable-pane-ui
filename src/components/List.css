@@ -1,0 +1,36 @@
+.list {
+    height: 95%;
+    display: block;
+    padding: 0.55rem;
+    overflow-y: auto;
+}
+
+.list__control {
+    margin: 1rem 0;
+    display: block;
+    overflow: hidden;
+}
+
+.list__control label {
+    display: block;
+    font-weight: bold;
+    color: #464646;
+    margin-bottom: 0.5rem;
+}
+
+.list__control ul {
+    list-style: none;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.list__fallback {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem 0;
+}

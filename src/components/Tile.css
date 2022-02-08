@@ -1,0 +1,20 @@
+.tile {
+  height: 100%;
+  width: 100%;
+
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-top;
+
+  /* border: 1px solid #000000; */
+  border-radius: 5px;
+  /* background: #fefdff; */
+  background: rgb(37, 80, 116);
+  background: linear-gradient(
+    135deg,
+    rgba(37, 80, 116, 0.30015756302521013) 0%,
+    rgba(1, 126, 184, 1) 85%
+  );
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
+}

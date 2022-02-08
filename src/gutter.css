@@ -1,0 +1,27 @@
+.gutter-horizontal {
+  padding: 0 1px;
+  height: 200%;
+  width: 20px;
+  /* background: #cdcdcd; */
+}
+.gutter-horizontal:hover {
+  cursor: col-resize;
+}
+
+.dragger-horizontal {
+  display: none;
+}
+
+.gutter-vertical {
+  padding: 0 1px;
+  height: 20px;
+  width: 100%;
+  /* background: #cdcdcd; */
+}
+.gutter-vertical:hover {
+  cursor: row-resize;
+}
+
+.dragger-vertical {
+  display: none;
+}
