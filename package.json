@@ -1,7 +1,7 @@
 {
   "name": "precily-resizable-pane-ui",
   "version": "1.0.2",
-  "private": true,
+  "description": "React based resizable phonebook like app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -36,7 +36,21 @@
     "uuid": "^8.3.2",
     "cors": "^2.8.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DebdutBiswas/precily-resizable-pane-ui.git"
+  },
+  "keywords": [
+    "crud api",
+    "express crud api",
+    "simple crud api",
+    "nodejs crud",
+    "precily resizable pane api"
+  ],
   "author": "Debdut Biswas",
   "license": "MIT",
-  "description": "React based resizable phonebook link app"
+  "bugs": {
+    "url": "https://github.com/DebdutBiswas/precily-resizable-pane-ui/issues"
+  },
+  "homepage": "https://github.com/DebdutBiswas/precily-resizable-pane-ui#readme"
 }
