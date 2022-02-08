@@ -2,6 +2,8 @@
   "name": "precily-resizable-pane-ui",
   "version": "1.0.2",
   "description": "React based resizable phonebook like app",
+  "private": true,
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -31,7 +33,6 @@
       "last 1 safari version"
     ]
   },
-  "main": "index.js",
   "devDependencies": {
     "uuid": "^8.3.2",
     "cors": "^2.8.5"
@@ -48,9 +49,5 @@
     "precily resizable pane api"
   ],
   "author": "Debdut Biswas",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DebdutBiswas/precily-resizable-pane-ui/issues"
-  },
-  "homepage": "https://github.com/DebdutBiswas/precily-resizable-pane-ui#readme"
+  "license": "MIT"
 }
