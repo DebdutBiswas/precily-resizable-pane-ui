@@ -12,7 +12,7 @@ const Form = (props) => {
         const timeoutIdentifier = setTimeout(() => {
             setId(props?.selection?.id ?? '');
             setData({ name: props?.selection?.name ?? data.name, phone: props?.selection?.phone ?? data.phone });
-        }, 250);
+        }, 50);
 
         return () => {
             // console.log(`clean up`);
