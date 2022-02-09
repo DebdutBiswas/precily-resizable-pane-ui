@@ -27,17 +27,17 @@ const App = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const timeoutIdentifier = setTimeout(() => {
-      getAllContacts((allContacts) => {
-        setData(allContacts);
-      });
-    }, 5000);
+  // useEffect(() => {
+  //   const timeoutIdentifier = setTimeout(() => {
+  //     getAllContacts((allContacts) => {
+  //       setData(allContacts);
+  //     });
+  //   }, 5000);
 
-    return () => {
-      clearTimeout(timeoutIdentifier); //clear the last timer before setting a new timer
-    }; //cleanup function
-  }, [data]);
+  //   return () => {
+  //     clearTimeout(timeoutIdentifier);
+  //   };
+  // }, [data]);
 
   const dataSubmitHandler = (eventData) => {
     addNewContact(eventData, (newAddedContact) => {
