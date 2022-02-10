@@ -3,6 +3,7 @@ import React from "react";
 import './Counter.css';
 
 const Counter = (props) => {
+    // Set counter data from props
     const addCount = props?.addCount ?? '0';
     const updateCount = props?.updateCount ?? '0';
 
