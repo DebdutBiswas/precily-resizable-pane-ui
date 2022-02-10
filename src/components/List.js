@@ -4,6 +4,8 @@ import ListItem from './ListItem';
 import './List.css';
 
 const List = (props) => {
+    // Operation handler passes current contact selection data and operation event
+    // for each of the List items to parent component via props via function passing
     const operationHandler = (event) => {
         const selectedData = props?.items?.find?.((item) => item.id === event.id) ?? {};
         props?.selectedItem?.({...selectedData, operation: event.operation });
