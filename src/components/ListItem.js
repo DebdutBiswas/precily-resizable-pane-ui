@@ -3,6 +3,8 @@ import React from "react";
 import './ListItem.css';
 
 const ListItem = (props) => {
+    // Select handler passes current contact selection and selection button event to
+    // List component via props via function passing
     const selectHandler = (event) => {
         props?.onEdit?.({ id: props?.id ?? '', operation: event.target.id });
     };
