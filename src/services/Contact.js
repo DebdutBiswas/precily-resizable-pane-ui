@@ -7,10 +7,12 @@ axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.put['Content-Type'] = 'application/json';
 axios.defaults.headers.delete['Content-Type'] = 'application/json';
 
+// Set axios api endpoint
 export function setContactsBaseURL(url) {
     axios.defaults.baseURL = url;
 };
 
+// Get all contacts from api and store into state via callback
 export function getAllContacts(setState) {
     let result = [];
 
@@ -26,6 +28,7 @@ export function getAllContacts(setState) {
     });
 };
 
+// Create a new contact from ui to api and store newly added contact to state via callback
 export function addNewContact(newData, setState) {
     axios.post('/', newData)
     .then((res) => {
@@ -40,6 +43,7 @@ export function addNewContact(newData, setState) {
     });
 };
 
+// Get a single contact from api by id and store returned contact to state via callback
 export function getContactById(id, setState) {
     axios.get(`/${id}`)
     .then((res) => {
@@ -54,6 +58,7 @@ export function getContactById(id, setState) {
     });
 };
 
+// Update a single contact from ui to api by id and store old contact to state via callback
 export function updateContactById(id, newData, setState) {
     axios.put(`/${id}`, newData)
     .then((res) => {
@@ -68,6 +73,7 @@ export function updateContactById(id, newData, setState) {
     });
 };
 
+// Delete a single contact from ui to api by id and store deleted contact to state via callback
 export function deleteContactById(id, setState) {
     axios.delete(`/${id}`)
     .then((res) => {
