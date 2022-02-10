@@ -14,19 +14,23 @@ import "./gutter.css";
 
 const apiBaseURL = process.env.REACT_APP_API_URI || 'http://localhost:3000';
 
+// Set axios api endpoint for contacts
 setContactsBaseURL(`${apiBaseURL}/contacts`);
 
 const App = () => {
+  // State management
   const [data, setData] = useState([]);
   const [opCounter, setOpCounter] = useState({ addCount: 0, updateCount: 0, deleteCount: 0 });
   const [selectedData, setSelectedData] = useState({ id: '', name: '', phone: '' });
 
+  // Get all contacts for first time
   useEffect(() => {
     getAllContacts((allContacts) => {
       setData(allContacts);
     });
   }, []);
 
+  // Poll all contacts with 5 sec interval
   // useEffect(() => {
   //   const timeoutIdentifier = setTimeout(() => {
   //     getAllContacts((allContacts) => {
@@ -39,6 +43,7 @@ const App = () => {
   //   };
   // }, [data]);
 
+  // Add new contact handler
   const dataSubmitHandler = (eventData) => {
     addNewContact(eventData, (newAddedContact) => {
       getAllContacts((allContacts) => {
@@ -49,6 +54,7 @@ const App = () => {
     });
   };
 
+  // Update contact handler
   const dataUpdateHandler = (eventData) => {
     updateContactById(eventData.id, eventData, (oldContact) => {
       setSelectedData({ id: '', name: '', phone: '' });
@@ -60,6 +66,7 @@ const App = () => {
     });
   };
 
+  // Delete contact handler
   const dataDeleteHandler = (eventData) => {
     deleteContactById(eventData.id, (deletedContact) => {
       // setSelectedData(previousData => {
@@ -74,6 +81,7 @@ const App = () => {
     });
   };
 
+  // Select and update ui of form fields from selected contact item
   const selectedDataHandler = (eventData) => {
     if (eventData.operation === 'delete') {
       dataDeleteHandler(eventData);
