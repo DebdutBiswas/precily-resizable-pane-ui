@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 import './Form.css';
 
 const Form = (props) => {
+    // State management
     const [id, setId] = useState('');
     const [data, setData] = useState({ name: '', phone: '' });
     const [isValid, setIsValid] = useState({ name: true, phone: true });
 
+    // Check for contact edit selection from contact list to update data to form input fields
     useEffect(() => {
         //use set timeout for debouncing
         const timeoutIdentifier = setTimeout(() => {
@@ -20,6 +22,7 @@ const Form = (props) => {
         }; //cleanup function
     }, [props.selection]);
 
+    // Add button handler
     const submitHandler = (event) => {
         event.preventDefault();
         if (validationChecker() === false) return;
@@ -27,6 +30,7 @@ const Form = (props) => {
         setData({ name: '', phone: '' });
     };
 
+    // Update button handler
     const updateHandler = (event) => {
         if (validationChecker() === false) return;
         props.onUpdate({ ...data, id });
@@ -34,6 +38,7 @@ const Form = (props) => {
         setData({ name: '', phone: '' });
     };
 
+    // Form data change handler
     const dataChangeHandler = (event) => {
         if (event.target.value.trim().length > 0) {
             setIsValid({ ...isValid, [event.target.id]: true });
@@ -41,6 +46,7 @@ const Form = (props) => {
         setData({ ...data, [event.target.id]: event.target.value });
     };
 
+    // Form input validation checker
     const validationChecker = () => {
         let validityTest = true;
 
